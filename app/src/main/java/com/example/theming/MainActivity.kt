@@ -15,8 +15,8 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.theming.ui.theme.Shapes
 import com.example.theming.ui.theme.ThemingTheme
 
 
@@ -40,12 +40,13 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MyApp() {
     val appModifier = Modifier.fillMaxWidth().padding(8.dp)
+
     Column(
         verticalArrangement = Arrangement.spacedBy(16.dp),
-        ){
+        ) {
         Text(
             text = "My title",
-            style = MaterialTheme.typography.headlineLarge,
+            style = MaterialTheme.typography.titleLarge,
             modifier = appModifier
         )
         OutlinedTextField(
@@ -55,17 +56,18 @@ fun MyApp() {
         )
         Button(
             onClick = { /*TODO*/ },
-            modifier = appModifier
+            modifier = appModifier,
+            shape = Shapes.small
         ) {
             Text(text = "Submit")
         }
     }
 }
-
+/*
 @Preview(showBackground = true)
 @Composable
 fun ThemingPreview() {
-    ThemingTheme {
+   ThemingTheme {
         MyApp()
     }
-}
+}*/
