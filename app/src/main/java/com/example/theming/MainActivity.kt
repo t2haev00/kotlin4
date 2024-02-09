@@ -64,7 +64,7 @@ fun MyApp() {
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun ThemingPreview() {
     ThemingTheme {
         MyApp()
     }
